@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/4/22.
+ * Created by katniss on 2018/4/22.
  */
 import React from 'react';
 import {Radar, RadarChart, PolarGrid, Legend,

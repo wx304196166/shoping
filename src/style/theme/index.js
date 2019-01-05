@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/5/6.
+ * Created by katniss on 2018/5/6.
  */
 import themeinfo from './theme-info.json';
 import themegrey from './theme-grey.json';

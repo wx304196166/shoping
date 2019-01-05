@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/4/17.
+ * Created by katniss on 2018/4/17.
  */
 import React from 'react';
 import { Row, Col, Card } from 'antd';

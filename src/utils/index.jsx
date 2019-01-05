@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/4/28.
+ * Created by katniss on 2018/4/28.
  */
 // 获取url的参数
 export const queryString = () => {

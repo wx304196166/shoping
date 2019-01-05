@@ -1,7 +1,7 @@
 /**
  *
  * 添加注释
- * Created by SEELE on 2018/1/12
+ * Created by katniss on 2018/1/12
  *
  */
 import React, { Component } from 'react';

@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/4/14.
+ * Created by katniss on 2018/4/14.
  */
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';

@@ -1,5 +1,5 @@
 /**
- * Created by hao.cheng on 2018/4/21.
+ * Created by katniss on 2018/4/21.
  */
 import React from 'react';
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
