@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Routes from './routes';
 import DocumentTitle from 'react-document-title';
-import SiderCustom from './components/SiderCustom';
-import HeaderCustom from './components/HeaderCustom';
 import { Layout, notification, Icon } from 'antd';
 import { receiveData } from './action';
 import { connect } from 'react-redux';
@@ -67,19 +65,17 @@ class App extends Component {
     }
     render() {
         const { title } = this.state;
-        const { auth, responsive } = this.props;
+        const { auth } = this.props;
         return (
             <DocumentTitle title={title}>
                 <Layout>
-                    {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed} />}
                     <ThemePicker />
                     <Layout style={{flexDirection: 'column'}}>
-                        <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
                         <Content style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}>
                             <Routes auth={auth} onRouterChange={this._setTitle} />
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>
-                        React-Admin ©{new Date().getFullYear()} Created by 865470087@qq.com
+                        Created by 544965448@qq.com
                         </Footer>
                     </Layout>
                 </Layout>
