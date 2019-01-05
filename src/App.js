@@ -5,7 +5,6 @@ import { Layout, notification, Icon } from 'antd';
 import { receiveData } from './action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { ThemePicker } from './components/widget';
 
 const { Content, Footer } = Layout;
 
@@ -69,7 +68,7 @@ class App extends Component {
         return (
             <DocumentTitle title={title}>
                 <Layout>
-                    <ThemePicker />
+                    {/* <ThemePicker /> */}
                     <Layout style={{flexDirection: 'column'}}>
                         <Content style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}>
                             <Routes auth={auth} onRouterChange={this._setTitle} />
