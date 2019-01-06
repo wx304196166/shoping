@@ -1,5 +1,5 @@
 /**
- * Created by Katniss on 2018/7/30.
+ * Created by katniss on 2017/7/30.
  */
 import * as type from './type';
 import * as http from '../axios/index';

@@ -1,5 +1,5 @@
 /**
- * Created by Katniss on 2018/7/31.
+ * Created by katniss on 2017/7/31.
  */
 import { Component } from 'react';
 import { connect } from 'react-redux';

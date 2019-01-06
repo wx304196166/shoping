@@ -1,5 +1,5 @@
 /**
- * Created by Katniss on 2018/7/30.
+ * Created by katniss on 2017/7/30.
  */
 import { combineReducers } from 'redux';
 import * as type from '../action/type';

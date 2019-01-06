@@ -1,12 +1,13 @@
 /**
- * Created by katniss on 2018/5/3.
+ * Created by katniss on 2017/5/3.
  */
 import React from 'react';
 
 class Dashboard extends React.Component {
     render() {
         return (
-            <div className="gutter-example button-demo">1
+            <div className="gutter-example button-demo">
+                homepage
             </div>
         )
     }

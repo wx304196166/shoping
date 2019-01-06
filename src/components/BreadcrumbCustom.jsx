@@ -1,5 +1,5 @@
 /**
- * Created by katniss on 2018/4/22.
+ * Created by katniss on 2017/4/22.
  */
 import React from 'react';
 import { Breadcrumb } from 'antd';
@@ -12,7 +12,7 @@ class BreadcrumbCustom extends React.Component {
         return (
             <span>
                 <Breadcrumb style={{ margin: '12px 0' }}>
-                    <Breadcrumb.Item><Link to={'/app/'}>首页</Link></Breadcrumb.Item>
+                    <Breadcrumb.Item><Link to={'/app/dashboard/index'}>首页</Link></Breadcrumb.Item>
                         {first}
                         {second}
                 </Breadcrumb>
