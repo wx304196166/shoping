@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import routes from '../routes/config';
 import SiderMenu from './SiderMenu';
 
-const { Sider } = Layout;
+const { Content } = Layout;
 
 class SiderCustom extends Component {
     static getDerivedStateFromProps (props, state) { 
@@ -67,13 +67,12 @@ class SiderCustom extends Component {
     };
     render() {
         return (
-            <Sider
+            <Content
                 trigger={null}
                 breakpoint="lg"
                 collapsed={this.props.collapsed}
                 style={{ overflowY: 'auto' }}
             >
-                <div className="logo" />
                 <SiderMenu
                     menus={routes.menus}
                     onClick={this.menuClick}
@@ -82,15 +81,7 @@ class SiderCustom extends Component {
                     openKeys={this.state.firstHide ? null : [this.state.openKey]}
                     onOpenChange={this.openMenu}
                 />
-                <style>
-                    {`
-                    #nprogress .spinner{
-                        left: ${this.state.collapsed ? '70px' : '206px'};
-                        right: 0 !important;
-                    }
-                    `}
-                </style>
-            </Sider>
+            </Content>
         )
     }
 }

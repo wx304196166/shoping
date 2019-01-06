@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import Routes from './routes';
 import DocumentTitle from 'react-document-title';
 import SiderCustom from './components/SiderCustom';
-import HeaderCustom from './components/HeaderCustom';
+import Login from './components/login';
 import { Layout, notification, Icon } from 'antd';
 import { receiveData } from './action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { ThemePicker } from './components/widget';
 
 const { Content, Footer } = Layout;
 
@@ -72,9 +71,8 @@ class App extends Component {
             <DocumentTitle title={title}>
                 <Layout>
                     {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed} />}
-                    <ThemePicker />
                     <Layout style={{flexDirection: 'column'}}>
-                        <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
+                        <Login toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
                         <Content style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}>
                             <Routes auth={auth} onRouterChange={this._setTitle} />
                         </Content>

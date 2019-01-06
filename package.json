@@ -136,5 +136,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "reselect": "^4.0.0"
   }
 }
