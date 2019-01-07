@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 import { onTestadd } from '../action/loginAction';
 import Login from '../components/login';
 
-const mapStateToPros = (state) => ({
+const mapStateToProps = (state) => ({
+  dispatch: state.dispatch,
   inputValue: state.login.inputValue
 });
 const LoginContainer = connect(
-  mapStateToPros,
+  mapStateToProps,
   {
     onTestadd
   }

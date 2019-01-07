@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { loginPC } from '../../api/login';
 import LoginInput from '../common/loginInput';
 import Verification from './verification';
@@ -33,9 +32,5 @@ class Register extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  const { responsive = { data: {} } } = state.httpData;
-  return { responsive };
-};
 
-export default withRouter(connect(mapStateToProps)(Register));
+export default Register;

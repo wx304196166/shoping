@@ -1,32 +1,15 @@
-/**
- * Created by katniss on 2017/7/30.
- */
 import { combineReducers } from 'redux';
-import * as type from '../action/type';
+import { routerReducer } from 'react-router-redux';
 
-const handleData = (state = {isFetching: true, data: {}}, action) => {
-    switch (action.type) {
-        case type.REQUEST_DATA:
-            return {...state, isFetching: true};
-        case type.RECEIVE_DATA:
-            return {...state, isFetching: false, data: action.data};
-        default:
-            return {...state};
-    }
-};
-const httpData = (state = {}, action) => {
-    switch (action.type) {
-        case type.RECEIVE_DATA:
-        case type.REQUEST_DATA:
-            return {
-                ...state,
-                [action.category]: handleData(state[action.category], action)
-            };
-        default:
-            return {...state};
-    }
-};
+/* 这里是我们自定义的各种reducer */
+import loginReducer from './loginReducer'; // 这个稍后创建
 
-export default combineReducers({
-    httpData
+/* 利用官方提供的combineReducers将所有reducer组合成一个 */
+const RootReducer = combineReducers({
+  // 注意一定要加上routing: routerReducer 这是用于redux和react-router的连接
+  routing: routerReducer,
+  // 其他的reducers
+  login: loginReducer, // 这里的命名，关系到container中取state对应的reducer的名字
 });
+
+export default RootReducer;

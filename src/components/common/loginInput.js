@@ -18,7 +18,7 @@ class LoginInput extends Component {
           className=''
           type={type}
           value={value}
-          maxlength={maxLength || 200}
+          maxLength={maxLength || 200}
           onChange={this.changeUsername} />
       </div>
     )

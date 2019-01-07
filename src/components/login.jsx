@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
 import { loginPC } from '../api/login'
 import LoginInput from './common/loginInput'
+import { onTestadd } from '../action/loginAction'
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,7 @@ class Login extends Component {
   render() {
     const { password, name } = this.state;
     const { inputValue, onTestadd } = this.props;
+    console.log(this.props);
     return (
       <div>
         <LoginInput label='Login Name' type='text' ref='userName' />
@@ -32,17 +34,22 @@ class Login extends Component {
         <span onClick={this.goRegister}>Register</span>
         <button onClick={this.login}>login</button>
         <button>cancel</button>
-
-        <span>{inputValue}</span>
-        <button onclick={() => onTestadd(inputValue + 1)}>click</button>
+        <div>
+          <span>{inputValue}</span>
+          <button onClick={() => onTestadd(inputValue + 1)}>click</button>
+        </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  const { responsive = { data: {} } } = state.httpData;
-  return { responsive };
+const mapStateToPorps = state => {
+  const { inputValue } = state.login;
+  return { inputValue };
 };
+const mapDispatchToProps = dispatch => ({
+  onTestadd: bindActionCreators(onTestadd, dispatch)
+});
 
-export default withRouter(connect(mapStateToProps)(Login));
+
+export default connect(mapStateToPorps, mapDispatchToProps)(Login);

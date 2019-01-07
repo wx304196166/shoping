@@ -5,12 +5,15 @@ const intlState = {
 const redecerFn = (state = intlState, action) => {
   switch (action.type) {
     case 'ADD':
-      const { num } = action;
+      const {
+        num
+      } = action;
       return {
         ...state,
         inputValue: num + 1
       }
     default:
+      console.log(state);
       return state
   }
 }

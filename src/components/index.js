@@ -4,6 +4,7 @@ import Products from './products/products';
 import Integration from './integration/integration';
 import Maintenance from './maintenance/maintenance';
 import Register from './register/register';
+import Login from './login';
 
 export default {
   Homepage,
@@ -11,5 +12,6 @@ export default {
   Products,
   Integration,
   Maintenance,
-  Register
+  Register,
+  Login
 }
