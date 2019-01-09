@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './style.scss';
+
 class LoginInput extends Component {
   constructor(props) {
     super(props);
@@ -9,16 +11,17 @@ class LoginInput extends Component {
     this.setState({ value: e.target.value });
   }
   render() {
-    const { label, type, maxLength } = this.props;
+    const { label, type, maxLength, onblurEvent } = this.props;
     const { value } = this.state;
     return (
-      <div>
+      <div className="inputContainer">
         <label className=''>{label}</label>
         <input
           className=''
           type={type}
           value={value}
           maxLength={maxLength || 200}
+          onBlur={onblurEvent}
           onChange={this.changeUsername} />
       </div>
     )

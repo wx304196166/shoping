@@ -1,19 +1,20 @@
 import request from '../utils/request'
 
-export function loginPC(username,password) {
+export function loginPC(username, password) {
   return request({
-    url: `/user/login/${username}/${password}`,
-    method: 'post'
+    url: `/user/login`,
+    method: 'post',
+    data: {
+      username,
+      password
+    }
   })
 }
 
-export function fetchArticle(id) {
+export function checkName(username) {
   return request({
-    url: '/article/detail',
-    method: 'get',
-    params: {
-      id
-    }
+    url: `/user/check/${username}`,
+    method: 'get'
   })
 }
 
@@ -42,4 +43,3 @@ export function updateArticle(data) {
     data
   })
 }
-

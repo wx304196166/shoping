@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loginPC } from '../api/login'
-import LoginInput from './common/loginInput'
+import LoginInput from './common/loginInput/loginInput'
 import { onTestadd } from '../action/loginAction'
 class Login extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Login extends Component {
     this.goRegister = this.goRegister.bind(this);
   }
   goRegister() {
-    this.props.history.push("/register");
+    this.props.history.push("/app/register");
   }
   async login() {
     const userName = this.refs.userName.state.value;
@@ -26,7 +26,6 @@ class Login extends Component {
   render() {
     const { password, name } = this.state;
     const { inputValue, onTestadd } = this.props;
-    console.log(this.props);
     return (
       <div>
         <LoginInput label='Login Name' type='text' ref='userName' />

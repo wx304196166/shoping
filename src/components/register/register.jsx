@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { loginPC } from '../../api/login';
-import LoginInput from '../common/loginInput';
+import { loginPC, checkName } from '../../api/login';
+import LoginInput from '../common/loginInput/loginInput';
 import Verification from './verification';
 // import Verification2 from './2';
 class Register extends Component {
@@ -10,6 +10,7 @@ class Register extends Component {
     this.state = {
     };
     this.login = this.login.bind(this);
+    this.checkName = this.checkName.bind(this);
   }
 
   async login() {
@@ -17,10 +18,15 @@ class Register extends Component {
     const password = this.refs.password.state.value;
     const data = await loginPC(userName, password);
   }
+
+  async checkName() {
+    const userName = this.refs.userName.state.value;
+    const data = await checkName(userName);
+  }
   render() {
     return (
-      <div>
-        <LoginInput label='Login Name' ref='userName' />
+      <div className="registerContainer">
+        <LoginInput label='Login Name' ref='userName' onblurEvent={this.checkName} />
         <LoginInput label='Password' type='password' ref='password' />
         <LoginInput label='Name' ref='name' />
         <LoginInput label='Phone' ref='phone' maxLength='20' />

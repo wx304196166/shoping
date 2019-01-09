@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import reducer from './reducer';
 import store from './store';
 import App from './App';
 import './style/lib/animate.css';
