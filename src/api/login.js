@@ -1,45 +1,34 @@
 import request from '../utils/request'
 
-export function loginPC(username, password) {
+//登录
+export function loginPC(username, password, type = 1) {
   return request({
-    url: `/user/login`,
+    url: '/user/login',
     method: 'post',
     data: {
       username,
-      password
+      password,
+      type
     }
   })
 }
-
-export function checkName(username) {
+//检查用户名是否存在
+export function checkName(username, type = 1) {
   return request({
-    url: `/user/check/${username}`,
+    url: `/user/check/${username}/${type}`,
     method: 'get'
   })
 }
-
-export function fetchPv(pv) {
+//注册
+export function registerCustom({username, password, name, phone}) {
   return request({
-    url: '/article/pv',
-    method: 'get',
-    params: {
-      pv
+    url: `/user/createCustomer`,
+    method: 'post',
+    data: {
+      username,
+      password,
+      name,
+      phone
     }
-  })
-}
-
-export function createArticle(data) {
-  return request({
-    url: '/article/create',
-    method: 'post',
-    data
-  })
-}
-
-export function updateArticle(data) {
-  return request({
-    url: '/article/update',
-    method: 'post',
-    data
   })
 }

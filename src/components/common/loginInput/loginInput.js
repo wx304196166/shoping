@@ -15,7 +15,7 @@ class LoginInput extends Component {
     const { value } = this.state;
     return (
       <div className="inputContainer">
-        <label className=''>{label}</label>
+        <label className="label">{label}</label>
         <input
           className=''
           type={type}

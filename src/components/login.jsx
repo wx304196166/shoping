@@ -27,16 +27,12 @@ class Login extends Component {
     const { password, name } = this.state;
     const { inputValue, onTestadd } = this.props;
     return (
-      <div>
+      <div className="loginContainer">
         <LoginInput label='Login Name' type='text' ref='userName' />
         <LoginInput label='Password' type='password' ref='password' />
-        <span onClick={this.goRegister}>Register</span>
         <button onClick={this.login}>login</button>
         <button>cancel</button>
-        <div>
-          <span>{inputValue}</span>
-          <button onClick={() => onTestadd(inputValue + 1)}>click</button>
-        </div>
+        <span onClick={this.goRegister}>Register</span>
       </div>
     )
   }
