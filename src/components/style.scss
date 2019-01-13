@@ -1,12 +1,71 @@
+body{
+  font-size: 14px;
+  color: #333;
+}
+ul,
+ol,
+li,
+P {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+
+}
+
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    padding: 0;
+  }
+}
+
 .container {
   margin: 0 auto;
   text-align: center;
 }
+
 .loginContainer {
   margin: 0 auto;
   text-align: center;
 }
+
 .menu {
   margin-right: 50px;
 }
-

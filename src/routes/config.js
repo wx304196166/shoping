@@ -9,5 +9,7 @@ export default {
   others: [
     { key: '/app/login', title: 'Login', component: 'Login' },
     { key: '/app/register', title: 'Register', component: 'Register' },
+    { key: '/app/productDetail', title: 'ProductDetail', component: 'ProductDetail' },
+
   ] // 非菜单相关路由
 }
