@@ -5,11 +5,13 @@ class verification extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      ...this.initState(),
-      refresh: false
+      refresh: false,
+      ...this.initState()
     }
   }
-
+  componentDidMount() {
+    this.canvas()
+  }
   initState() {
     return {
       data: this.getRandom(109, 48, 4),
@@ -35,7 +37,6 @@ class verification extends Component {
     const { getRandom } = this
     const canvas = document.getElementById('bgi')
     let ctx = canvas.getContext('2d')
-    canvas.height = canvas.height
     // ctx.clearRect(0, 0, canvas.width(), canvas.height())
     ctx.strokeStyle = `rgb(${this.getRandom(100, 10, 3).toString()})`
     for (let i = 0; i < 7; i++) {
@@ -44,19 +45,17 @@ class verification extends Component {
       ctx.stroke();
     }
   }
-  componentDidMount() {
-    this.canvas()
-  }
+
 
   render() {
     const { rotate, fz, color } = this.state
     return (
-      <div className='vcodewrap' >
-        <canvas id="bgi" width="200" height="200"></canvas>
+      <div className="vcodewrap" >
+        <canvas id="bgi" width="200" height="200" />
         {this.state.data.map((v, i) =>
           <div
             key={i}
-            className='itemStr'
+            className="itemStr"
             style={{
               transform: `rotate(${rotate[i]}deg)`,
               fontSize: `${fz[i]}px`,
@@ -68,9 +67,9 @@ class verification extends Component {
           </div>
         )}
         {
-          this.state.refresh
-            ? <div
-              className='mask'
+          this.state.refresh ?
+            <div
+              className="mask"
               onClick={() => {
                 this.setState({ ...this.initState(), refresh: false })
                 this.canvas()

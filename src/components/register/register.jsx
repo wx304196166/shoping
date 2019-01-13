@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { loginPC, checkName, registerCustom } from '../../api/login';
+import { checkName, registerCustom } from '../../api/login';
 import LoginInput from '../common/loginInput/loginInput';
 import Verification from './verification';
 // import Verification2 from './2';
@@ -20,26 +19,26 @@ class Register extends Component {
   // }
 
   async checkName() {
-    const userName = this.refs.userName.state.value;
-    const data = await checkName(userName);
+    const userName = this.userName.state.value;
+    await checkName(userName);
   }
 
   async registerCustom() {
-    const username = this.refs.userName.state.value;
-    const password = this.refs.password.state.value;
-    const name = this.refs.name.state.value;
-    const phone = this.refs.phone.state.value;
-    const data = await registerCustom({ username, password, name, phone });
+    const username = this.userName.state.value;
+    const password = this.password.state.value;
+    const name = this.name.state.value;
+    const phone = this.phone.state.value;
+    await registerCustom({ username, password, name, phone });
   }
 
   render() {
     return (
       <div className="registerContainer">
-        <LoginInput label='Login Name' ref='userName' onblurEvent={this.checkName} />
-        <LoginInput label='Password' type='password' ref='password' />
-        <LoginInput label='Name' ref='name' />
-        <LoginInput label='Phone' ref='phone' maxLength='20' />
-        <LoginInput label='Code' ref='code' /><Verification />
+        <LoginInput label="Login Name" ref={(mol) => { this.username = mol; }} onblurEvent={this.checkName} />
+        <LoginInput label="Password" type="password" ref={(mol) => { this.password = mol; }} />
+        <LoginInput label="Name" ref={(mol) => { this.name = mol; }} />
+        <LoginInput label="Phone" ref={(mol) => { this.phone = mol; }} maxLength="20" />
+        <LoginInput label="Code" /><Verification />
         <button onClick={this.registerCustom}>OK</button>
         <button>Cancel</button>
       </div>

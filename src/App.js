@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Routes from './routes';
 import SiderMenu from './components/SiderMenu';
-import Login from './components/login';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import routes from './routes/config';
 
 class App extends Component {
@@ -14,7 +11,7 @@ class App extends Component {
     };
     this.gotoLoginPage = this.gotoLoginPage.bind(this);
   }
-  gotoLoginPage(){
+  gotoLoginPage() {
     this.props.history.push("/app/login");
   }
   _setTitle = ({ title }) => {
@@ -24,14 +21,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <span className='login' onClick={this.gotoLoginPage}>Login</span>
+        <span className="login" onClick={this.gotoLoginPage}>Login</span>
         <SiderMenu
           menus={routes.menus}
           onClick={this.menuClick}
           mode="inline"
           selectedKeys={[this.state.selectedKey]}
           openKeys={this.state.firstHide ? null : [this.state.openKey]}
-          onOpenChange={this.openMenu} />
+          onOpenChange={this.openMenu}
+        />
         <Routes onRouterChange={this._setTitle} />
       </div>
     );

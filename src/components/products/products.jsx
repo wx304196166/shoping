@@ -1,9 +1,5 @@
-/**
- * Created by katniss on 2019/1/8.
- */
 import React from 'react';
 import SingleProduct from './singleProduct';
-import product from '../../style/imgs/product.png';
 import './style.scss';
 
 class Products extends React.Component {
@@ -11,11 +7,11 @@ class Products extends React.Component {
     super(props);
     this.state = {
       products: [
-        { photo: '', summary: '时代峰峻客户水电费' },
-        { photo: '', summary: 'sdfxcvsdf' },
-        { photo: '', summary: '时代峰峻客户水电费' },
-        { photo: '', summary: 'sdfxcvsdfwersdfsfxcv     sdfxvsdf' },
-        { photo: '', summary: '时代峰峻客户水电费' },
+        { photo: '', title: 'led2', summary: '时代峰峻客户水电费' },
+        { photo: '', title: '啊目的', summary: 'sdfxcvsdf' },
+        { photo: '', title: 'led2', summary: '时代峰峻客户水电费' },
+        { photo: '', title: 'led2', summary: 'sdfxcvsdfwersdfsfxcv     sdfxvsdf' },
+        { photo: '', title: 'led2', summary: '时代峰峻客户水电费' },
       ]
     }
   }

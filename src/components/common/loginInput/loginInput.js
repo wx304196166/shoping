@@ -17,12 +17,12 @@ class LoginInput extends Component {
       <div className="inputContainer">
         <label className="label">{label}</label>
         <input
-          className=''
           type={type}
           value={value}
           maxLength={maxLength || 200}
           onBlur={onblurEvent}
-          onChange={this.changeUsername} />
+          onChange={this.changeUsername}
+        />
       </div>
     )
   }

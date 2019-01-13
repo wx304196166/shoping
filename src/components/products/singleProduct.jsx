@@ -8,11 +8,14 @@ import './style.scss';
 class SingleProducts extends React.Component {
   render() {
     const { info } = this.props;
-    const { summary } = info || {};
+    const { summary, title } = info || {};
     return (
       <div className="product">
-        <img src={product} />
-        <div className="productSummary">{summary}</div>
+        <img src={product} alt="" />
+        <div className="productSummary">
+          <h3>{title}</h3>
+          {summary}
+        </div>
       </div>
     );
   }

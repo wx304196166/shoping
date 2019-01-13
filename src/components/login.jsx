@@ -19,17 +19,15 @@ class Login extends Component {
     this.props.history.push("/app/register");
   }
   async login() {
-    const userName = this.refs.userName.state.value;
-    const password = this.refs.password.state.value;
-    const data = await loginPC(userName, password);
+    const userName = this.userName.state.value;
+    const password = this.password.state.value;
+    await loginPC(userName, password);
   }
   render() {
-    const { password, name } = this.state;
-    const { inputValue, onTestadd } = this.props;
     return (
       <div className="loginContainer">
-        <LoginInput label='Login Name' type='text' ref='userName' />
-        <LoginInput label='Password' type='password' ref='password' />
+        <LoginInput label="Login Name" type="text" ref={(mol) => { this.username = mol; }} />
+        <LoginInput label="Password" type="password" ref={(mol) => { this.password = mol; }} />
         <button onClick={this.login}>login</button>
         <button>cancel</button>
         <span onClick={this.goRegister}>Register</span>
