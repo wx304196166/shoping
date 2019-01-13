@@ -1,5 +1,6 @@
 import React from 'react';
 import SingleProduct from './singleProduct';
+import Divide from './brand/divide';
 import './style.scss';
 
 class Products extends React.Component {
@@ -18,10 +19,11 @@ class Products extends React.Component {
   render() {
     const { products } = this.state;
     const productList = products && products.length > 0 && products.map((item, i) => {
-      return <SingleProduct info={item} />
+      return <SingleProduct info={item} key={i} />
     });
     return (
       <div className="productContainer">
+        <Divide />
         <div className="productList">
           {productList}
         </div>

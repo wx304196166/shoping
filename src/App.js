@@ -16,7 +16,7 @@ class App extends Component {
   }
   _setTitle = ({ title }) => {
     if (this.state.title === title) return;
-    this.setState({ title });
+    // this.setState({ title });
   }
   render() {
     return (
@@ -26,9 +26,6 @@ class App extends Component {
           menus={routes.menus}
           onClick={this.menuClick}
           mode="inline"
-          selectedKeys={[this.state.selectedKey]}
-          openKeys={this.state.firstHide ? null : [this.state.openKey]}
-          onOpenChange={this.openMenu}
         />
         <Routes onRouterChange={this._setTitle} />
       </div>
