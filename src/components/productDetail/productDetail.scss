@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 .intro,
 .detail-box {
   padding: 20px 6%;
+=======
+.intro,.detail-box{  
+  padding: 20px 0;
+  
+>>>>>>> 56e66277d8ae07bdb2c098fac1d8e8009ead0edf
 }
 
 .blank {
@@ -10,6 +16,8 @@
 .intro {
   height: 500px;
   border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
   >li {
     float: left;
     height: 100%;

@@ -5,7 +5,7 @@ import './productDetail.scss';
 class ProductDetail extends React.Component {
   render() {
     return (
-      <div>
+      <div className="page-container">
         <ul className="intro clearfix">
           <li className="show-box">
             <div>
