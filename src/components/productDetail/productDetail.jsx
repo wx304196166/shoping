@@ -1,7 +1,5 @@
-/**
- * Created by katniss on 2017/5/3.
- */
 import React from 'react';
+import Related from '../common/releated/related';
 import './productDetail.scss';
 
 class ProductDetail extends React.Component {
@@ -16,7 +14,14 @@ class ProductDetail extends React.Component {
             <ul className="spec-list">
               <li></li>
               <li>
-
+                {/* 小图列表 */}
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
               </li>
               <li></li>
             </ul>
@@ -41,19 +46,13 @@ class ProductDetail extends React.Component {
         </ul>
         <ul className="detail-box clearfix">
           <li className="related">
-            <div className="title">Related products</div>
-            <ul className="list">
-              <li className="item">
-                <div>图片</div>
-                <p>Product name</p>
-              </li>
-            </ul>
+            <Related />
           </li>
           <li className="blank">&emsp;</li>
           <li className="detail">
             <div className="tab">Commodity introduction</div>
             <div className="content">
-              Curabitur auctor tristique lobortis. Quisque bibendum, ipsum in feugiat pharetra, odio libero malesuada turpis, tempus fermentum augue est sit amet magna. Vestibulum bibendum lectus non mauris porta, sed blandit purus scelerisque. Sed consequat mollis ornare. Sed laoreet id dolor vitae facilisis. Mauris varius orci sed turpis commodo mattis. Cras vel nibh scelerisque urna tincidunt vestibulum accumsan pharetra ex. Proin ullamcorper eros non justo tincidunt lobortis. Ut sapien nisi, bibendum tempor efficitur ultricies, pellentesque interdum diam. Aliquam commodo felis eu urna consectetur, ut semper diam tempor. Etiam eu maximus sapien, a tristique tortor.            
+              Curabitur auctor tristique lobortis. Quisque bibendum, ipsum in feugiat pharetra, odio libero malesuada turpis, tempus fermentum augue est sit amet magna. Vestibulum bibendum lectus non mauris porta, sed blandit purus scelerisque. Sed consequat mollis ornare. Sed laoreet id dolor vitae facilisis. Mauris varius orci sed turpis commodo mattis. Cras vel nibh scelerisque urna tincidunt vestibulum accumsan pharetra ex. Proin ullamcorper eros non justo tincidunt lobortis. Ut sapien nisi, bibendum tempor efficitur ultricies, pellentesque interdum diam. Aliquam commodo felis eu urna consectetur, ut semper diam tempor. Etiam eu maximus sapien, a tristique tortor.
             </div>
           </li>
         </ul>

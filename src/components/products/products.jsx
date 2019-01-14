@@ -24,6 +24,8 @@ class Products extends React.Component {
     return (
       <div className="productContainer">
         <Divide />
+        <input type="search" class="search-keyword" placeholder="Please enter keywords" />
+        <button className="search-button" type="submit"/>
         <div className="productList">
           {productList}
         </div>

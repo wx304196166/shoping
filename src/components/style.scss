@@ -15,6 +15,9 @@ ol {
   list-style: none;
 
 }
+a {
+  color: inherit;
+}
 
 
 a:focus,
@@ -59,6 +62,7 @@ a:hover {
 .container {
   margin: 0 auto;
   text-align: center;
+  background: #333;
 }
 
 .loginContainer {
@@ -66,6 +70,10 @@ a:hover {
   text-align: center;
 }
 
+// header content
 .menu {
+  display: inline-block;
   margin-right: 50px;
+  padding: 15px 0;
+  color: #fff;
 }

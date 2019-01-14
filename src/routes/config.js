@@ -1,10 +1,10 @@
 export default {
   menus: [ // 菜单相关路由
     { key: '/app/dashboard/index', title: 'Home', component: 'Homepage' },
-    { key: '/app/download', title: 'Download', component: 'Download' },
     { key: '/app/products', title: 'Products', component: 'Products' },
-    { key: '/app/maintenance', title: 'Maintenance', component: 'Maintenance' },
-    { key: '/app/integration', title: 'Integration', component: 'Integration' }
+    { key: '/app/integration', title: 'Integration', component: 'Integration' },
+    { key: '/app/download', title: 'Download', component: 'Download' },
+    { key: '/app/maintenance', title: 'Maintenance', component: 'Maintenance' }
   ],
   others: [
     { key: '/app/login', title: 'Login', component: 'Login' },

@@ -16,12 +16,11 @@ class App extends Component {
   }
   _setTitle = ({ title }) => {
     if (this.state.title === title) return;
-    // this.setState({ title });
   }
   render() {
     return (
       <div>
-        <span className="login" onClick={this.gotoLoginPage}>Login</span>
+        <div className="login" onClick={this.gotoLoginPage}>Log In / Sign Up</div>
         <SiderMenu
           menus={routes.menus}
           onClick={this.menuClick}
