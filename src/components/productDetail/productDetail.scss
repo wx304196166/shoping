@@ -1,12 +1,13 @@
 .intro,.detail-box{  
-  padding: 20px 6%;
+  padding: 20px 0;
+  
 }
 .blank{
   width: 3.5%;
 }
 .intro {
   height: 500px;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 
   >li {
     float: left;
