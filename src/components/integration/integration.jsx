@@ -7,7 +7,7 @@ class Integration extends React.Component {
     render() {
         return (
             <div className="page-container">
-                integration
+                integration page
             </div>
         )
     }
