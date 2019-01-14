@@ -6,7 +6,7 @@ import React from 'react';
 class Integration extends React.Component {
     render() {
         return (
-            <div className="gutter-example button-demo">
+            <div className="page-container">
                 integration
             </div>
         )
