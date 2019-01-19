@@ -1,0 +1,20 @@
+.show-box {
+  height: 800px;
+  >ul,
+  >div {
+    float: left;
+    height: 100%;
+  }
+  .blank{
+    width: 1.5%;
+  }
+  .show{
+    width: 21%;
+  }
+  .operate{
+    width: 57%;
+  }
+  .related{
+    width: 19%;
+  }
+}
